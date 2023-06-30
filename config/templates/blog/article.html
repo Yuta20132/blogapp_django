@@ -1,0 +1,29 @@
+{% extends 'mysite/base.html' %}
+
+
+{%block content%}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h3 class="pd-4 mb-4 font-italic ">
+                {{article.title}}
+            </h3>
+            <p class="small text-muted text-end"> {{article.created_at}} {{article.author}}</p>
+            <p>{{article.text}}</p>
+            
+            
+            
+
+
+
+            
+        </div>
+
+        {% include 'mysite/snippets/sidebar.html' %}
+    </div>
+</main>
+
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+<nav class="blog-pagination">
+    <div class="pagenation">
+        <span class="step-links">
+            {% if page_objects.has_previous%}
+                <a class="btn btn-outline-primary" href="?page=1">&laquo; first</a>
+                <a class="btn btn-outline-primary" href="?page={{ page_objects.previous_page_number_}}">previous</a>
+            {%endif%}
+    
+            
+    
+            {% if page_objects.has_next %}
+                <a class="btn btn-outline-primary" href="?page={{ page_objects.next_page_number}}">next</a>
+                <a class="btn btn-outline-primary" href="?page={{ page_objects.paginator.num_pages}}">last &raquo;</a>
+            {%endif%}
+        </span>
+    </div>
+</nav>
