@@ -139,3 +139,14 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_URL = '/logout/'
 
 LOGOUT_REDIRECT_URL = '/login/'
+
+
+from django.contrib import messages
+
+MESSAGE_TAGS = {
+    messages.ERROR:'rounded-0 alert alert-danger',
+    messages.WARNING:'rounded-1 alert alert-warning',
+    messages.INFO:'rounded-2 alert alert-info',
+    messages.SUCCESS:'rounded-3 alert alert-success',
+    messages.DEBUG:'rounded-4 alert alert-secondary'
+}
