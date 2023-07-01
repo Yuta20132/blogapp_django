@@ -22,3 +22,5 @@ class Comment(models.Model):
     created_at = models.DateField(auto_now_add=True)
 
     user = models.ForeignKey(get_user_model(),on_delete=models.CASCADE)
+
+    article = models.ForeignKey(Article,on_delete=models.CASCADE)
