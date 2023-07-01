@@ -10,4 +10,22 @@
             </p>
         </a>
     </div>
+
+    {% if user.is_authenticated %}
+    <form action="POST" class="my-4">
+        <div class="mb-2">
+            <label for="">コメント投稿</label>
+            <textarea class="rounded-0 bg-light form-control" rows="3"></textarea>
+        </div>
+        <div class="btn btn-sm btn-outline-success" type="submit">
+            コメントする
+        </div>
+    </form>
+    {% else %}
+
+    <p class="my-4">
+        コメントを投稿するには<a href="/login/">ログイン</a>してください
+    </p>
+
+    {% endif %}
 </div>
