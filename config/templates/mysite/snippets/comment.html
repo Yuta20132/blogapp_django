@@ -10,7 +10,10 @@
                 <small>{{comment.comment}}</small>
             </p>
             <p class="m-0">
-                <small>{{comment.created_at}}</small>
+                <small>
+                    {{comment.user.profile.username}}さん
+                    {{comment.created_at}}
+                </small>
             </p>
         </a>
         {%endfor%}

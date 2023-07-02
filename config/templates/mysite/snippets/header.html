@@ -13,7 +13,10 @@
             <a class="p-2 link-secondary" href="#">お問い合わせ</a>
 
             {% if user.is_authenticated %}
-            <a href="/logout/" class="p-2 link-secondary" >ログアウト</a>
+            <div>
+                <a href="/logout/" class="p-2 link-secondary" >ログアウト</a>
+                <a href="/mypage/" class="p-2 link-secondary" >マイページ</a>
+            </div>
             {% else %}
             <div>
                 <a href="/login/" class="p-2 link-secondary" >ログイン</a>
